@@ -23,9 +23,9 @@
             
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="/" class="text-white hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">Home</a>
-                <a href="/templates/jobs/index.html" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">Jobs offers</a>
-                <a href="/templates/compagny.html" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">About us</a>
-                <a href="/templates/contact.html" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">Contact</a>
+                <a href="{{ path('app_jobs')}}" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">Jobs offers</a>
+                <a href="{{ path('app_compagny') }}" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">About us</a>
+                <a href="{{ path('app_contact')}}" class="text-white/80 hover:text-amber-400 font-medium transition-colors text-sm uppercase tracking-wider">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
@@ -49,10 +49,10 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-b border-gray-800">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-950">Home</a>
-            <a href="/templates/jobs/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Jobs Offers</a>
-            <a href="/templates/compagny.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About Us</a>
-            <a href="/templates/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a>
+            <a href="{{ path('app_home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-950">Home</a>
+            <a href="{{ path('app_jobs')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Jobs Offers</a>
+            <a href="{{ path('app_compagny')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About Us</a>
+            <a href="{{ path('app_contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a>
             <hr class="border-gray-800 my-2">
             <a href="/templates/auth/profile.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Profile</a>
             <a href="/logout.html" class="block px-3 py-2 rounded-md text-base font-medium text-red-400 hover:bg-gray-800">Logout</a>
@@ -117,7 +117,7 @@
                     <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
                         <h1 class="text-2xl md:text-4xl font-extrabold uppercase tracking-wide mb-6">We provide customized services on demand</h1>
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-8">You know that attracting and retaining top talent is vital for the success of your business. It’s that end result you’re focused on – hiring a great team – and not the process to get there. This is where we can help...</p>
-                        <a href="/contact.html" class="inline-block border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-amber-950 font-bold px-8 py-3.5 rounded-full uppercase tracking-wider text-sm transition-all duration-300 transform hover:-translate-y-0.5">
+                        <a href="{{ path('app_contact')}}" class="inline-block border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-amber-950 font-bold px-8 py-3.5 rounded-full uppercase tracking-wider text-sm transition-all duration-300 transform hover:-translate-y-0.5">
                             Get in touch <span class="font-normal text-white group-hover:text-amber-950">with us</span>
                         </a>
                     </div>
@@ -211,9 +211,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ul class="flex flex-wrap justify-center space-x-6 text-xs uppercase tracking-wider font-semibold">
                 <li><a href="/" class="text-white hover:text-amber-400 transition-colors">Home</a></li>
-                <li><a href="/jobs.html" class="hover:text-white transition-colors">Jobs offers</a></li>
-                <li><a href="/about-us.html" class="hover:text-white transition-colors">About us</a></li>
-                <li><a href="/contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="{{ path('app_jobs')}}" class="hover:text-white transition-colors">Jobs offers</a></li>
+                <li><a href="{{ path('app_compagny')}}" class="hover:text-white transition-colors">About us</a></li>
+                <li><a href="{{ path('app_contact')}}" class="hover:text-white transition-colors">Contact</a></li>
             </ul>
         </div>
     </div>

@@ -60,6 +60,9 @@ class Candidature
     #[ORM\ManyToMany(targetEntity: Job::class, mappedBy: 'candidature')]
     private Collection $jobs;
 
+    #[ORM\ManyToOne(inversedBy: 'candidatures')]
+    private ?User $user = null;
+
     public function __construct()
     {
         $this->jobs = new ArrayCollection();
@@ -249,6 +252,18 @@ class Candidature
         if ($this->jobs->removeElement($job)) {
             $job->removeCandidature($this);
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }

@@ -46,9 +46,9 @@
             <nav class="hidden md:flex items-center space-x-8">
                 <ul class="flex space-x-6 text-white font-medium">
                     <li><a href="/" class="hover:text-amber-400 transition border-b-2 border-amber-400 pb-1">Home</a></li>
-                    <li><a href="/templates/jobs/index.html" class="hover:text-amber-400 transition pb-1">Jobs offers</a></li>
-                    <li><a href="/templates/compagny.html" class="hover:text-amber-400 transition pb-1">About us</a></li>
-                    <li><a href="/templates/contact.html" class="hover:text-amber-400 transition pb-1">Contact</a></li>
+                    <li><a href="{{path('app_jobs')}}" class="hover:text-amber-400 transition pb-1">Jobs offers</a></li>
+                    <li><a href="{{path('app_compagny)}}" class="hover:text-amber-400 transition pb-1">About us</a></li>
+                    <li><a href="{{path('app_contact')}}" class="hover:text-amber-400 transition pb-1">Contact</a></li>
                 </ul>
                 
                 <div class="flex items-center space-x-4 ml-4">
@@ -73,9 +73,9 @@
     <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/95 z-40 flex flex-col items-center justify-center space-y-6 text-xl text-white">
         <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
         <a href="/" class="hover:text-amber-400 transition">Home</a>
-        <a href="/templates/jobs/index.html" class="hover:text-amber-400 transition">Jobs Offers</a>
-        <a href="/templates/compagny.html" class="hover:text-amber-400 transition">About Us</a>
-        <a href="/templates/contact.html" class="hover:text-amber-400 transition">Contact</a>
+        <a href="{{ path('app_jobs')}}" class="hover:text-amber-400 transition">Jobs Offers</a>
+        <a href="{{ path('app_compagny')}}" class="hover:text-amber-400 transition">About Us</a>
+        <a href="{{ path('app_contact')}}" class="hover:text-amber-400 transition">Contact</a>
         <hr class="w-16 border-gray-700">
         <a href="/templates/auth/profile.html" class="hover:text-amber-400 transition text-sm text-gray-400">Profile</a>
         <a href="/logout.html" class="hover:text-amber-400 transition text-sm text-gray-400">Logout</a>
@@ -211,9 +211,9 @@
         <div class="max-w-7xl mx-auto px-4">
             <ul class="flex flex-wrap justify-center space-x-6 text-gray-400">
                 <li><a href="/" class="hover:text-white transition text-amber-400">Home</a></li>
-                <li><a href="/jobs.html" class="hover:text-white transition">Jobs offers</a></li>
-                <li><a href="/about-us.html" class="hover:text-white transition">About us</a></li>
-                <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
+                <li><a href="{{ path('app_jobs') }}" class="hover:text-white transition">Jobs offers</a></li>
+                <li><a href="{{ path('app_compagny')}}" class="hover:text-white transition">About us</a></li>
+                <li><a href="{{ path('app_contact')}}" class="hover:text-white transition">Contact</a></li>
             </ul>
         </div>
     </div>

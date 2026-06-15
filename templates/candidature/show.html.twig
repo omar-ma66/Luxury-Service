@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidature{% endblock %}
+
+{% block body %}
+    <h1>Candidature</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ candidature.id }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ candidature.genre }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ candidature.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ candidature.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ candidature.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ candidature.pays }}</td>
+            </tr>
+            <tr>
+                <th>Nationalite</th>
+                <td>{{ candidature.nationalite }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ candidature.dateNaissance ? candidature.dateNaissance|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ candidature.email }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ candidature.password }}</td>
+            </tr>
+            <tr>
+                <th>JobCategorie</th>
+                <td>{{ candidature.jobCategorie }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ candidature.experience }}</td>
+            </tr>
+            <tr>
+                <th>DateCreation</th>
+                <td>{{ candidature.dateCreation ? candidature.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DateMiseAjour</th>
+                <td>{{ candidature.dateMiseAjour ? candidature.dateMiseAjour|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_candidature_index') }}">back to list</a>
+
+    <a href="{{ path('app_candidature_edit', {'id': candidature.id}) }}">edit</a>
+
+    {{ include('candidature/_delete_form.html.twig') }}
+{% endblock %}
