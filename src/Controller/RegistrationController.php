@@ -22,6 +22,7 @@ class RegistrationController extends AbstractController
     public function __construct(private EmailVerifier $emailVerifier)
     {
     }
+// ############################################################################################################################################
 
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
@@ -58,7 +59,7 @@ class RegistrationController extends AbstractController
             'registrationForm' => $form,
         ]);
     }
-
+// ############################################################################################################################################
     #[Route('/verify/email', name: 'app_verify_email')]
     public function verifyUserEmail(Request $request, TranslatorInterface $translator, UserRepository $userRepository): Response
     {
@@ -89,3 +90,4 @@ class RegistrationController extends AbstractController
         return $this->redirectToRoute('app_register');
     }
 }
+// ############################################################################################################################################

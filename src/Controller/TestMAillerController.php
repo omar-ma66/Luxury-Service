@@ -9,9 +9,9 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class TestMAillerController extends AbstractController
+final class TestMaillerController extends AbstractController
 {
-    #[Route('/test/m/ailler', name: 'app_test_m_ailler')]
+    #[Route('/test/mailler', name: 'app_test_mailler')]
     public function index(MailerInterface $mailer): Response
     {
           $email = new TemplatedEmail()
@@ -25,8 +25,8 @@ final class TestMAillerController extends AbstractController
             ->htmlTemplate("emails/test.html.twig");
 
         $mailer->send($email);
-        return $this->render('test_m_ailler/index.html.twig', [
-            'controller_name' => 'TestMAillerController',
+        return $this->render('test_mailler/index.html.twig', [
+            'controller_name' => 'TestMaillerController',
         ]);
     }
 }
