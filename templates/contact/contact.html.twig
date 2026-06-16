@@ -183,41 +183,7 @@
     </div>
 </div>
 
-<footer class="bg-neutral-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center relative">
-        
-        <a href="#top" class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-r from-amber-500 to-yellow-600 flex items-center justify-center text-white shadow-lg hover:opacity-90 transition">
-            <i class="material-icons">&#xE316;</i>
-        </a>
-
-        <ul class="flex justify-center space-x-6 pt-4 mb-6">
-            <li><a href="#!" target="_blank" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-white transition"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#!" target="_blank" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-white transition"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-
-        <hr class="border-gray-800 mb-8 max-w-xs mx-auto">
-
-        <div class="space-y-4 max-w-2xl mx-auto">
-            <span class="text-sm text-gray-500 block">
-                &copy; 2018 All right reserved - by <a href="https://idmkr.io/" target="_blank" class="hover:text-white transition">IDMKR</a> - <a href="#!" class="hover:text-white transition">Terms of use</a>
-            </span>
-            <p class="text-sm text-gray-400 leading-relaxed">
-                Luxury Services is a leading professional recruitment consultancy specialising in the recruitment of permanent, contract and temporary positions on behalf of the world’s top employers.
-            </p>
-        </div>
-    </div>
-
-    <div class="bg-neutral-950 py-4 text-center text-sm border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4">
-            <ul class="flex flex-wrap justify-center space-x-6 text-gray-400">
-                <li><a href="/" class="hover:text-white transition text-amber-400">Home</a></li>
-                <li><a href="{{ path('app_jobs') }}" class="hover:text-white transition">Jobs offers</a></li>
-                <li><a href="{{ path('app_compagny')}}" class="hover:text-white transition">About us</a></li>
-                <li><a href="{{ path('app_contact')}}" class="hover:text-white transition">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+{{ include ('_partials/_footer.html.twig')}}
 
 <script type="text/javascript">
     const menuToggle = document.getElementById('menu-toggle');
